@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Widget MCP-UI</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            margin: 0;
+            padding: 1rem;
+            background: #f8f9fa;
+        }
+        
+        .widget-container {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .widget-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .widget-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #333;
+            margin: 0;
+        }
+        
+        .download-info {
+            background: #e3f2fd;
+            border: 1px solid #2196f3;
+            border-radius: 4px;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+            color: #1976d2;
+        }
+        
+        .download-info strong {
+            font-weight: 600;
+        }
+        
+        .widget-content {
+            /* Preserve original widget styles */
+        }
+    </style>
+</head>
+<body>
+    <div class="widget-container">
+        <div class="widget-header">
+            <h1 class="widget-title">Widget MCP-UI</h1>
+        </div>
+        
+        <div class="download-info">
+            <strong>Widget MCP-UI Exportado</strong><br>
+            Este widget foi exportado do VerifAI Desktop em 14/11/2025, 22:14:53.<br>
+            <em>Nota: Algumas funcionalidades interativas podem não funcionar fora do ambiente VerifAI.</em>
+        </div>
+        
+        <div class="widget-content">
+            <div>
+  <h1 style="font-family: Poppins, sans-serif; color:#111827; margin-bottom:16px;">Instalar Chocolatey e Maven no Windows</h1>
+  <section style="font-family:Poppins, sans-serif; line-height:1.6; color:#374151; max-width:900px; padding:16px; background:#F9FAFB; border-radius:12px; box-shadow:0 2px 8px rgba(15,23,42,0.08);">
+    <p>Esse erro significa que o PowerShell não encontrou o comando <code style="background:#E5E7EB; padding:2px 6px; border-radius:4px;">choco</code>, ou seja, o Chocolatey não está instalado (ou não está no PATH).</p>
+    <p>Veja abaixo como resolver e, também, como instalar o Maven sem o Chocolatey.</p>
+
+    <hr style="border:none; border-top:1px solid #E5E7EB; margin:16px 0;" />
+
+    <h2 style="color:#111827; font-size:1.25rem; margin-top:12px;">1. Verificar se o Chocolatey está instalado</h2>
+    <p>No PowerShell, rode:</p>
+    <pre style="background:#111827; color:#E5E7EB; padding:10px 12px; border-radius:8px; overflow-x:auto;"><code>choco -v</code></pre>
+    <p>Se aparecer o mesmo erro, é porque o Chocolatey realmente não está instalado.</p>
+
+    <hr style="border:none; border-top:1px solid #E5E7EB; margin:16px 0;" />
+
+    <h2 style="color:#111827; font-size:1.25rem; margin-top:12px;">2. Instalar o Chocolatey (Windows)</h2>
+    <ol style="padding-left:20px;">
+      <li>Abra o <strong>PowerShell como Administrador</strong>.</li>
+      <li>
+        Verifique se a política de execução permite scripts:
+        <pre style="background:#111827; color:#E5E7EB; padding:10px 12px; border-radius:8px; overflow-x:auto;"><code>Get-ExecutionPolicy</code></pre>
+        Se retornar <code style="background:#E5E7EB; padding:2px 6px; border-radius:4px;">Restricted</code>, execute:
+        <pre style="background:#111827; color:#E5E7EB; padding:10px 12px; border-radius:8px; overflow-x:auto;"><code>Set-ExecutionPolicy Bypass -Scope Process -Force</code></pre>
+      </li>
+      <li>
+        Execute o comando oficial de instalação do Chocolatey:
+        <pre style="background:#111827; color:#E5E7EB; padding:10px 12px; border-radius:8px; overflow-x:auto;"><code>Set-ExecutionPolicy Bypass -Scope Process -Force; `
+[System.Net.ServicePointManager]::SecurityProtocol = `
+    [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; `
+iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))</code></pre>
+      </li>
+      <li>Feche o PowerShell e abra novamente (como admin ou não, tanto faz).</li>
+      <li>Teste:
+        <pre style="background:#111827; color:#E5E7EB; padding:10px 12px; border-radius:8px; overflow-x:auto;"><code>choco -v</code></pre>
+      </li>
+    </ol>
+
+    <p>Se funcionar, agora você pode rodar:</p>
+    <pre style="background:#111827; color:#E5E7EB; padding:10px 12px; border-radius:8px; overflow-x:auto;"><code>choco install maven -y</code></pre>
+
+    <p>Depois, confira o Maven:</p>
+    <pre style="background:#111827; color:#E5E7EB; padding:10px 12px; border-radius:8px; overflow-x:auto;"><code>mvn -v</code></pre>
+
+    <hr style="border:none; border-top:1px solid #E5E7EB; margin:16px 0;" />
+
+    <h2 style="color:#111827; font-size:1.25rem; margin-top:12px;">3. Instalar Maven sem Chocolatey (alternativa)</h2>
+    <ol style="padding-left:20px;">
+      <li>
+        Acesse:
+        <a href="https://maven.apache.org/download.cgi" target="_blank" rel="noopener noreferrer">https://maven.apache.org/download.cgi</a><br />
+        Baixe o <strong>Binary zip archive</strong> (por ex.: <code style="background:#E5E7EB; padding:2px 6px; border-radius:4px;">apache-maven-3.9.x-bin.zip</code>).
+      </li>
+      <li>
+        Extraia o ZIP, por exemplo para:
+        <pre style="background:#111827; color:#E5E7EB; padding:10px 12px; border-radius:8px; overflow-x:auto;"><code>C:\dev\apache-maven-3.9.x</code></pre>
+      </li>
+      <li>
+        Configure as variáveis de ambiente (Windows):
+        <ul style="padding-left:18px;">
+          <li>Abra <strong>Painel de Controle → Sistema → Configurações avançadas do sistema → Variáveis de Ambiente</strong>.</li>
+          <li>Em <strong>Variáveis do sistema</strong>:
+            <ul style="padding-left:18px;">
+              <li>
+                Crie uma nova variável:<br />
+                <strong>Nome:</strong> <code style="background:#E5E7EB; padding:2px 6px; border-radius:4px;">MAVEN_HOME</code><br />
+                <strong>Valor:</strong>
+                <pre style="background:#111827; color:#E5E7EB; padding:10px 12px; border-radius:8px; overflow-x:auto;"><code>C:\dev\apache-maven-3.9.x</code></pre>
+              </li>
+              <li>
+                Edite a variável <code style="background:#E5E7EB; padding:2px 6px; border-radius:4px;">Path</code> e adicione:
+                <pre style="background:#111827; color:#E5E7EB; padding:10px 12px; border-radius:8px; overflow-x:auto;"><code>C:\dev\apache-maven-3.9.x\bin</code></pre>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        Feche e abra novamente o PowerShell ou CMD e teste:
+        <pre style="background:#111827; color:#E5E7EB; padding:10px 12px; border-radius:8px; overflow-x:auto;"><code>mvn -v</code></pre>
+      </li>
+    </ol>
+
+    <p>Se aparecer a versão do Maven e do Java, está instalado corretamente.</p>
+
+    <div style="margin-top:20px; padding:12px 16px; background:#EEF2FF; border-radius:10px; display:flex; justify-content:space-between; align-items:center; gap:12px;">
+      <span style="font-size:0.95rem; color:#4B5563;">Clique no botão abaixo para pedir um passo a passo personalizado de acordo com o seu ambiente.</span>
+      <button onclick="sendAction('send_message', { message: 'Me ajude com um passo a passo personalizado para instalar o Maven no meu Windows.' })" style="background:#4F46E5; color:white; border:none; padding:10px 16px; border-radius:999px; cursor:pointer; font-weight:600; font-size:0.9rem; box-shadow:0 1px 4px rgba(79,70,229,0.4);">
+        Pedir ajuda personalizada
+      </button>
+    </div>
+  </section>
+
+  <script>
+  function sendAction(action, data = {}) {
+    window.parent.postMessage({
+      type: 'mcpui:action',
+      action: action,
+      data: data,
+      timestamp: new Date().toISOString()
+    }, '*');
+  }
+
+  function callTool(toolName, parameters = {}) {
+    sendAction('call_tool', {
+      tool: toolName,
+      parameters: parameters
+    });
+  }
+  </script>
+</div>
+        </div>
+    </div>
+</body>
+</html>
