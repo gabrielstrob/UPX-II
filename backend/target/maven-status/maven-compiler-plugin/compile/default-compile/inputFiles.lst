@@ -38,6 +38,8 @@ C:\Users\gabri\OneDrive\Projetos\UPX-II\backend\src\main\java\com\upxii\watersys
 C:\Users\gabri\OneDrive\Projetos\UPX-II\backend\src\main\java\com\upxii\watersystem\repository\MedidorRepository.java
 C:\Users\gabri\OneDrive\Projetos\UPX-II\backend\src\main\java\com\upxii\watersystem\repository\PerfilRepository.java
 C:\Users\gabri\OneDrive\Projetos\UPX-II\backend\src\main\java\com\upxii\watersystem\repository\UsuarioRepository.java
+C:\Users\gabri\OneDrive\Projetos\UPX-II\backend\src\main\java\com\upxii\watersystem\security\JpaUserDetailsService.java
+C:\Users\gabri\OneDrive\Projetos\UPX-II\backend\src\main\java\com\upxii\watersystem\security\SecurityConfig.java
 C:\Users\gabri\OneDrive\Projetos\UPX-II\backend\src\main\java\com\upxii\watersystem\service\AlertaService.java
 C:\Users\gabri\OneDrive\Projetos\UPX-II\backend\src\main\java\com\upxii\watersystem\service\impl\AlertaServiceImpl.java
 C:\Users\gabri\OneDrive\Projetos\UPX-II\backend\src\main\java\com\upxii\watersystem\service\impl\LeituraServiceImpl.java

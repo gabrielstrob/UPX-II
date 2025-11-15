@@ -33,3 +33,15 @@ A API ficará disponível em `http://localhost:8080`.
 | Alertas | GET, POST, PUT, DELETE | `/api/alertas/medidor/{medidorId}`, `/api/alertas/{id}` |
 
 Todos os endpoints aceitam e retornam DTOs declarados no pacote `com.upxii.watersystem.dto` e possuem validação via Bean Validation.
+
+## Autenticação
+
+- A API agora utiliza **HTTP Basic** através do Spring Security. Todas as rotas exigem autenticação, exceto `POST /api/usuarios` (para registrar o primeiro usuário) e `GET /actuator/health`/`/actuator/info`.
+- Cadastre pelo menos um usuário (via endpoint ou direto no banco) com senha em texto plano; ela será salva como hash BCrypt automaticamente.
+- Para acessar demais rotas, informe `email` e `senha` do usuário:
+
+```powershell
+curl -u usuario@example.com:MinhaSenhaSegura http://localhost:8080/api/usuarios
+```
+
+Em ferramentas como Postman, selecione "Authorization > Basic Auth" e preencha os mesmos valores. Remova a permissão pública de `POST /api/usuarios` assim que terminar o processo de onboarding inicial, se desejar.
